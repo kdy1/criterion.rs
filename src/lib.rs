@@ -823,6 +823,7 @@ impl<M: Measurement> Criterion<M> {
                  .help("Set the plotting backend. By default, Criterion.rs will use the gnuplot backend if gnuplot is available, or the plotters backend if it isn't."))
             .arg(Arg::with_name("output-format")
                 .long("output-format")
+                .env("OUTPUT_FORMAT")
                 .takes_value(true)
                 .possible_values(&["criterion", "bencher"])
                 .default_value("criterion")
